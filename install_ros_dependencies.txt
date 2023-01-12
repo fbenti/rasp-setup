@@ -1,0 +1,11 @@
+#The install process should also install the colcon build tools, but in case that doesn't happen, you can install the tools manually:
+
+sudo apt install python3-colcon-common-extensions
+
+#eigen3_cmake_module is also required, since Eigen3 is used on the transforms library:
+
+sudo apt install ros-foxy-eigen3-cmake-module
+
+#Some Python dependencies must also be installed (using pip or apt):
+
+sudo pip3 install -U empy pyros-genmsg setuptools
