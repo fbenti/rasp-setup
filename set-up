@@ -1,0 +1,21 @@
+1. Set Telemetry Radio on telem2
+
+- Change MAV_0_CONFIG to telem2, reboot.
+- Change SER_TEL2_BAUD to 57600 8N 1, reboot.
+- By default, other parameters are set to:
+	MAV_0_FLOW_CONTROL = auto-detect
+	MAV_0_FORWARD = enabled
+	MAV_0_MODE = normal
+	MAV_0_RADIO_CTL = enabled
+	MAV_0_RATE = 1200 B/s
+
+
+2. Set-up rtps with ros2
+
+- source ~/px4_ros_com_ros2/install/setup.bash
+- micrortps_agent -t UART -d /dev/ttyUSB0 -b 921600
+	if cannot open, run:
+	sudo chmod 777 /dev/ttyUSB0 -> you can check which dev  dmesg | grep tty
+- if do not see the topics, run:
+	ros2 daemon stop
+	ros2 daemon start
