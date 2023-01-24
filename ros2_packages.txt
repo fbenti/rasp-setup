@@ -1,0 +1,10 @@
+ros-foxy-ros-base
+ros-foxy-rmw-fastrtps-cpp
+ros-foxy-eigen3-cmake-module
+net-tools
+python3-colcon-common-extensions
+python3-launchpadlib
+python3-testresources
+build-essential
+pip
+openjdk-11-jdk
