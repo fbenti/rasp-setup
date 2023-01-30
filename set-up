@@ -19,3 +19,8 @@
 - if do not see the topics, run:
 	ros2 daemon stop
 	ros2 daemon start
+	
+
+3. Arm without GPS
+
+- Set CBRK_GPSFAIL to 240024.
